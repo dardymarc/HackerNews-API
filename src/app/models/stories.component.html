@@ -1,0 +1,15 @@
+<input [(ngModel)]="search" (input)="onSearch()" placeholder="Search..." />
+
+<ul>
+  <li *ngFor="let story of stories">
+    <a *ngIf="story.url; else noLink" [href]="story.url" target="_blank">
+      {{ story.title }}
+    </a>
+    <ng-template #noLink>
+      {{ story.title }}
+    </ng-template>
+  </li>
+</ul>
+
+<button (click)="prev()">Prev</button>
+<button (click)="next()">Next</button>
