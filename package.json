@@ -1,0 +1,15 @@
+{
+  "name": "hackernews-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+
+    "frontend": "cd frontend && npm install && npm start",
+
+    "backend": "cd backend/HackerNewsApi && dotnet restore && dotnet run"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
